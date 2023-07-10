@@ -18,8 +18,18 @@ class PostFetchingSuccessfulState extends PostsState {
   });
 }
 
-class PostsAdditionSuccessState extends PostsActionState{}
+class PostsAdditionSuccessState extends PostsActionState {}
 
+class PostsAdditionErrorState extends PostsActionState {}
 
-class PostsAdditionErrorState extends PostsActionState{}
+class PostsUpdateSuccessState extends PostsActionState {}
 
+class PostsUpdateErrorState extends PostsActionState {}
+
+class PostsPatchSuccessState extends PostsActionState {}
+
+class PostsPatchErrorState extends PostsActionState {}
+
+class PostsDeleteSuccessState extends PostsActionState {}
+
+class PostsDeleteErrorState extends PostsActionState {}

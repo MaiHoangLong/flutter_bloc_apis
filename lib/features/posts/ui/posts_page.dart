@@ -24,11 +24,6 @@ class _PostsPageState extends State<PostsPage> {
         appBar: AppBar(
           title: const Text('Posts Page'),
         ),
-        floatingActionButton: FloatingActionButton(
-            child: const Icon(Icons.add),
-            onPressed: () {
-              postsBloc.add(PostAddEvent());
-            }),
         body: BlocConsumer<PostsBloc, PostsState>(
           bloc: postsBloc,
           listenWhen: (previous, current) => current is PostsActionState,
@@ -53,6 +48,7 @@ class _PostsPageState extends State<PostsPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Text(successState.posts[index].id.toString()),
                           Text(successState.posts[index].title),
                           Text(successState.posts[index].body)
                         ],
